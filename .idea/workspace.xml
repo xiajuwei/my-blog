@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dd05983-a5cd-4bf2-b9a1-f82c0de62412" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/source/_posts/十大排序算法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/十大排序算法.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/详解java-nio/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/详解java-nio/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/详解java-nio/buffer.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,23 +18,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/十大排序算法.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/详解java-nio.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="102">
-                <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/Hexo-GitHub-搭建自己的博客.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="170">
-                <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1034">
+                <caret line="341" column="5" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -43,8 +33,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/将对象用作Map中的key.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="289">
-                <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="43" />
+              <first_editor relative-caret-position="85">
+                <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="37" />
               </first_editor>
               <second_editor />
             </state>
@@ -73,13 +63,14 @@
         <option value="$PROJECT_DIR$/source/_posts/测试.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/source/_posts/测测.md" />
-        <option value="$PROJECT_DIR$/source/_posts/java集合详解.md" />
         <option value="$PROJECT_DIR$/source/_posts/多线程.md" />
         <option value="$PROJECT_DIR$/source/_posts/常用JSON库性能比较.md" />
-        <option value="$PROJECT_DIR$/source/_posts/将对象用作Map中的key.md" />
         <option value="$PROJECT_DIR$/source/_posts/springclou配置.md" />
         <option value="$PROJECT_DIR$/source/_posts/Hexo-GitHub-搭建自己的博客.md" />
         <option value="$PROJECT_DIR$/source/_posts/十大排序算法.md" />
+        <option value="$PROJECT_DIR$/source/_posts/java集合详解.md" />
+        <option value="$PROJECT_DIR$/source/_posts/将对象用作Map中的key.md" />
+        <option value="$PROJECT_DIR$/source/_posts/详解java-nio.md" />
       </list>
     </option>
   </component>
@@ -93,10 +84,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1229" />
-    <option name="height" value="905" />
+    <option name="x" value="537" />
+    <option name="y" value="36" />
+    <option name="width" value="1178" />
+    <option name="height" value="913" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -122,6 +113,13 @@
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="my-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+              <item name="详解java-nio" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -139,15 +137,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\blog\my-blog\themes\landscape\source\image" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\blog\my-blog\source\_posts\详解java-nio" />
       <recent name="E:\blog\my-blog\source\_posts\十大排序算法" />
       <recent name="E:\blog\my-blog\source\_posts\将对象用作Map中的key" />
       <recent name="E:\blog\my-blog\source\_posts\常用JSON库性能比较" />
       <recent name="E:\blog\my-blog\source\_posts\Hexo-GitHub-搭建自己的博客" />
-      <recent name="E:\blog\my-blog\source\_posts\测测" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\blog\my-blog\themes\landscape\source\image" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -181,17 +179,18 @@
       <workItem from="1560311615015" duration="592000" />
       <workItem from="1560389688468" duration="599000" />
       <workItem from="1560476849873" duration="5796000" />
-      <workItem from="1560656735894" duration="599000" />
+      <workItem from="1560656735894" duration="3252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27856000" />
+    <option name="totallyTimeSpent" value="30509000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1229" height="905" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23609923" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1705757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -208,7 +207,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="SonarLint" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4682231" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28416485" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="14" />
@@ -252,16 +251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/java集合详解.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="204">
-            <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -309,8 +298,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/十大排序算法.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="102">
-            <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+          <first_editor relative-caret-position="306">
+            <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
           </first_editor>
           <second_editor />
         </state>
@@ -326,11 +315,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/java集合详解.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="238">
+            <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/详解java-nio/640.webp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/详解java-nio/通道流程.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/将对象用作Map中的key.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="289">
-            <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="43" />
+          <first_editor relative-caret-position="85">
+            <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/详解java-nio.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1034">
+            <caret line="341" column="5" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
           </first_editor>
           <second_editor />
         </state>
