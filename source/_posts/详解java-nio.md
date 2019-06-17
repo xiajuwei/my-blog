@@ -154,7 +154,7 @@ isLoaded()：如果缓冲区的内容在物理内存中，则返回真，否则�
 
 这里通过采用ByteBuffer和MappedByteBuffer分别读取大小约为5M的文件"src/1.ppt"来比较两者之间的区别，method3()是采用MappedByteBuffer读取的，method4()对应的是ByteBuffer。
 
- public static void method4(){
+    public static void method4(){
         RandomAccessFile aFile = null;
         FileChannel fc = null;
         try{
