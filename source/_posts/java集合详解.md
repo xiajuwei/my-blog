@@ -11,3 +11,7 @@ https://www.jianshu.com/p/fb4fb24ecc8f
 
 java集合入门和深入学习
 https://www.jianshu.com/p/a9fb4d26c2cd
+
+红黑树详解
+https://www.jianshu.com/p/e136ec79235c
+
