@@ -60,5 +60,9 @@ More info: [Deployment](https://hexo.io/docs/deployment.html)
 
 10.技术限制
 
+11.系统中锁的应用
+
+12.系统中检查代码工具
+
 
 
