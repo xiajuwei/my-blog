@@ -19,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/详解java-nio.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="353">
+              <first_editor relative-caret-position="1695">
                 <caret line="113" selection-start-line="113" selection-end-line="114" selection-end-column="32" />
               </first_editor>
               <second_editor />
@@ -31,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/java-中的锁.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="255">
+              <first_editor relative-caret-position="990">
                 <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
               </first_editor>
               <second_editor />
@@ -43,8 +43,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/hello-world.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="421">
-                <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+              <first_editor relative-caret-position="542">
+                <caret line="79" selection-start-line="79" selection-end-line="79" />
               </first_editor>
               <second_editor />
             </state>
@@ -101,9 +101,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="223" />
+    <option name="y" value="74" />
     <option name="width" value="1229" />
     <option name="height" value="905" />
   </component>
@@ -135,17 +135,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/ideaWork/study/spring-cloud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -191,17 +192,23 @@
       <workItem from="1560389688468" duration="599000" />
       <workItem from="1560476849873" duration="5796000" />
       <workItem from="1560656735894" duration="4338000" />
-      <workItem from="1560844329174" duration="15997000" />
+      <workItem from="1560844329174" duration="16675000" />
+      <workItem from="1561340283873" duration="3186000" />
+      <workItem from="1561516385879" duration="598000" />
+      <workItem from="1561601638321" duration="2000" />
+      <workItem from="1562062960930" duration="94000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47592000" />
+    <option name="totallyTimeSpent" value="52150000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19989339" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24307036" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -217,12 +224,14 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="SonarLint" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49946696" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28850326" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.49946696" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.16052061" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="14" />
       <window_info anchor="bottom" id="JRebel Executor" order="15" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -343,7 +352,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/详解java-nio.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="353">
+          <first_editor relative-caret-position="1695">
             <caret line="113" selection-start-line="113" selection-end-line="114" selection-end-column="32" />
           </first_editor>
           <second_editor />
@@ -353,7 +362,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/java-中的锁.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
+          <first_editor relative-caret-position="990">
             <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
           </first_editor>
           <second_editor />
@@ -363,8 +372,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/hello-world.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="421">
-            <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+          <first_editor relative-caret-position="542">
+            <caret line="79" selection-start-line="79" selection-end-line="79" />
           </first_editor>
           <second_editor />
         </state>
