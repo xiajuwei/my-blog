@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>将对象用作Map中的key | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如果将对象作为Map中的key，需要是实现该对象的equals方法和hashCode方法；现在一般通过lombok可以简单得实现，并且可以选择具体需要哪些字段参与equals和hashCode方法的计算。 Java类型系统中分为基础类型和引用类型，引用类型中所有的对象都有一个父类——java.lang.Object。基类Object提供了一些可扩展的方法：equals、hashCode、toStr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将对象用作Map中的key">
+<meta property="og:url" content="https://xiajuwei.github.io/my-blog/2019/05/31/将对象用作Map中的key/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="如果将对象作为Map中的key，需要是实现该对象的equals方法和hashCode方法；现在一般通过lombok可以简单得实现，并且可以选择具体需要哪些字段参与equals和hashCode方法的计算。 Java类型系统中分为基础类型和引用类型，引用类型中所有的对象都有一个父类——java.lang.Object。基类Object提供了一些可扩展的方法：equals、hashCode、toStr">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/05/31/将对象用作Map中的key/hashCode方法.jpg">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/05/31/将对象用作Map中的key/重复集合.jpg">
+<meta property="og:updated_time" content="2019-12-02T03:58:28.991Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="将对象用作Map中的key">
+<meta name="twitter:description" content="如果将对象作为Map中的key，需要是实现该对象的equals方法和hashCode方法；现在一般通过lombok可以简单得实现，并且可以选择具体需要哪些字段参与equals和hashCode方法的计算。 Java类型系统中分为基础类型和引用类型，引用类型中所有的对象都有一个父类——java.lang.Object。基类Object提供了一些可扩展的方法：equals、hashCode、toStr">
+<meta name="twitter:image" content="https://xiajuwei.github.io/my-blog/2019/05/31/将对象用作Map中的key/hashCode方法.jpg">
+  
+    <link rel="alternate" href="/my-blog/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/my-blog/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/my-blog/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/my-blog/">Home</a>
+        
+          <a class="main-nav-link" href="/my-blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/my-blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://xiajuwei.github.io/my-blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-将对象用作Map中的key" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/my-blog/2019/05/31/将对象用作Map中的key/" class="article-date">
+  <time datetime="2019-05-31T02:03:36.000Z" itemprop="datePublished">2019-05-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      将对象用作Map中的key
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果将对象作为Map中的key，需要是实现该对象的equals方法和hashCode方法；现在一般通过lombok可以简单得实现，并且可以选择具体需要哪些字段参与equals和hashCode方法的计算。</p>
+<p>Java类型系统中分为基础类型和引用类型，引用类型中所有的对象都有一个父类——java.lang.Object。基类Object提供了一些可扩展的方法：equals、hashCode、toString、clone和finalize。开发者在覆盖这些方法的时候，要遵循一定的约定，如果使用不当就会造成bug。</p>
+<p>equals 方法</p>
+<p>如果类有自己的“逻辑相等”概念，而且父类的equals方法又无法满足期望的时候，就应该覆盖equals方法。在开发中我们有时候会将一个自定义的对象作为map中的key，或者将一个自定义的对象加入到集合中，这时候就需要覆盖equals方法。</p>
+<p>hashCode方法</p>
+<p>覆盖equals方法的时候，要同时覆盖hashCode方法。这里一起看一个案例。假设我定义一个用户信息类，代码如下所示：</p>
+<p><img src="/my-blog/2019/05/31/将对象用作Map中的key/hashCode方法.jpg" alt="hashCode方法"></p>
+<p>这里使用@EqualsAndHashCode注解生成equals和hashCode方法，并排除了除userId以外的其他字段，表示该用户信息对象的唯一性只跟userId这个字段有关。如果该类是继承了某个自定义的类，需要考虑父类的字段，那么还可以使用@EqualsAndHashCode中的callSuper字段，设置为true就会连父类的字段一起考虑，默认是只考虑当前类中的字段。关注lombok的用法，这里不展开讲了。</p>
+<p>假设有一个场景，需要过滤确保某个列表里的用户对象是没有重复的，那么我们就需要确定用户对象的唯一id是什么？在这里是userId，可以使用集合来进行重复对象的过滤，代码如下所示：</p>
+<p><img src="/my-blog/2019/05/31/将对象用作Map中的key/重复集合.jpg" alt="hashCode方法"></p>
+<p>所有自定义的类都要覆盖toString方法，我会使用lombok的@ToString注解来帮我生成toString方法。使用toString方法可以将对象的字段都以可读的形式展示出来。这样在打印日志的时候，要打印某个对象，就不会打印出一个对象的地址，类似于UserInfo@1768b4，这种展示出来对排查问题一点帮助没有。</p>
+<p>clone方法</p>
+<p>我在开发中没有用过这个方法。要完成对象的拷贝，只需要区分自己是要深拷贝还是浅拷贝。一般我会使用拷贝构造器或静态工厂方法作为替代方案。</p>
+<p>finalize</p>
+<p>根据Java文档，finalize方法被设计出来是用于释放非Java资源，但是由于jvm的运行机制导致有很大可能不会调用到对象的finalize方法，或者调用的时机和顺序是不确定的，所以这个方法并没有达到其设计目标。Java9中这个方法已经被废弃了，不过现在很多面试还是会问到这个方法背后的原理，需要理解几个概念：<br>自定义类的对象，就是我们自定义的类，该类覆盖了finalize方法；<br>Finalizer对象，在新建一个覆盖了finalize方法的类的对象的时候，就会伴生一个Finalizer对象，并将该对象加入到一个双向列表中；<br>ReferenceQueuequeue，Finalizer对象创建出来后，就会被加入到这个双向列表；<br>FinalizerThread对象，Finalizer线程是3号线程，它的作用就是不断从上面哪个队列中取Finalizer对象，然后调用它的runFinalzier方法。</p>
+<p>在Java应用中，如果对finalize方法使用不合理，有时候会引发一类问题——存放Finalizer的双向列表过长，导致一些对象的finalze方法调用延迟，如果程序在这个方法中进行了某些对时间敏感的资源的释放，那么就会有问题。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://xiajuwei.github.io/my-blog/2019/05/31/将对象用作Map中的key/" data-id="ck3o7yf0c000am8vc5r79lrwo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/my-blog/2019/05/31/springclou配置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          springclou配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/my-blog/2019/05/31/常用JSON库性能比较/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">常用JSON库性能比较</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/my-blog/2019/12/02/lambda使用/">lambda使用</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2019/12/02/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2019/08/10/常用插件/">常用插件</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2019/07/02/redis/">redis</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2019/06/20/java-中的锁/">java 中的锁</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/my-blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/my-blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/my-blog/fancybox/jquery.fancybox.css">
+  <script src="/my-blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/my-blog/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

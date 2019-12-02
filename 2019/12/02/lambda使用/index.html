@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>lambda使用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、引言 java8最大的特性就是引入Lambda表达式，即函数式编程，可以将行为进行传递。总结就是：使用不可变值与函数，函数对不可变值进行处理，映射成另一个值。 java重要的函数式接口 1、什么是函数式接口 函数接口是只有一个抽象方法的接口，用作 Lambda 表达式的类型。使用@FunctionalInterface注解修饰的类，编译器会检测该类是否只有一个抽象方法或接口，否则，会报错。可以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lambda使用">
+<meta property="og:url" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、引言 java8最大的特性就是引入Lambda表达式，即函数式编程，可以将行为进行传递。总结就是：使用不可变值与函数，函数对不可变值进行处理，映射成另一个值。 java重要的函数式接口 1、什么是函数式接口 函数接口是只有一个抽象方法的接口，用作 Lambda 表达式的类型。使用@FunctionalInterface注解修饰的类，编译器会检测该类是否只有一个抽象方法或接口，否则，会报错。可以">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/函数式接口.jpg">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/class.webp">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/filter.webp">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/map.webp">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/flatMap.webp">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/reduce.webp">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/patition.webp">
+<meta property="og:image" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/group.webp">
+<meta property="og:updated_time" content="2019-12-02T09:41:00.135Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="lambda使用">
+<meta name="twitter:description" content="一、引言 java8最大的特性就是引入Lambda表达式，即函数式编程，可以将行为进行传递。总结就是：使用不可变值与函数，函数对不可变值进行处理，映射成另一个值。 java重要的函数式接口 1、什么是函数式接口 函数接口是只有一个抽象方法的接口，用作 Lambda 表达式的类型。使用@FunctionalInterface注解修饰的类，编译器会检测该类是否只有一个抽象方法或接口，否则，会报错。可以">
+<meta name="twitter:image" content="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/函数式接口.jpg">
+  
+    <link rel="alternate" href="/my-blog/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/my-blog/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/my-blog/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/my-blog/">Home</a>
+        
+          <a class="main-nav-link" href="/my-blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/my-blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://xiajuwei.github.io/my-blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-lambda使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/my-blog/2019/12/02/lambda使用/" class="article-date">
+  <time datetime="2019-12-02T06:26:54.000Z" itemprop="datePublished">2019-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      lambda使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><em><code>一、引言</code></em></strong></p>
+<p>java8最大的特性就是引入Lambda表达式，即函数式编程，可以将行为进行传递。总结就是：使用不可变值与函数，函数对不可变值进行处理，映射成另一个值。</p>
+<p><strong><em><code>java重要的函数式接口</code></em></strong></p>
+<p><strong><em><code>1、什么是函数式接口</code></em></strong></p>
+<p>函数接口是只有一个抽象方法的接口，用作 Lambda 表达式的类型。使用@FunctionalInterface注解修饰的类，编译器会检测该类是否只有一个抽象方法或接口，否则，会报错。可以有多个默认方法，静态方法。</p>
+<p>1.1 java8自带的常用函数式接口。</p>
+<p><img src="/my-blog/2019/12/02/lambda使用/函数式接口.jpg" alt="接口"></p>
+<pre><code>public class Test {
+    public static void main(String[] args) {
+        Predicate&lt;Integer&gt; predicate = x -&gt; x &gt; 185;
+        Student student = new Student(&quot;9龙&quot;, 23, 175);
+        System.out.println(
+            &quot;9龙的身高高于185吗？：&quot; + predicate.test(student.getStature()));
+
+        Consumer&lt;String&gt; consumer = System.out::println;
+        consumer.accept(&quot;命运由我不由天&quot;);
+
+        Function&lt;Student, String&gt; function = Student::getName;
+        String name = function.apply(student);
+        System.out.println(name);
+
+        Supplier&lt;Integer&gt; supplier = 
+            () -&gt; Integer.valueOf(BigDecimal.TEN.toString());
+        System.out.println(supplier.get());
+
+        UnaryOperator&lt;Boolean&gt; unaryOperator = uglily -&gt; !uglily;
+        Boolean apply2 = unaryOperator.apply(true);
+        System.out.println(apply2);
+
+        BinaryOperator&lt;Integer&gt; operator = (x, y) -&gt; x * y;
+        Integer integer = operator.apply(2, 3);
+        System.out.println(integer);
+
+        test(() -&gt; &quot;我是一个演示的函数式接口&quot;);
+    }
+
+    /**
+     * 演示自定义函数式接口使用
+     *
+     * @param worker
+     */
+    public static void test(Worker worker) {
+        String work = worker.work();
+        System.out.println(work);
+    }
+
+    public interface Worker {
+        String work();
+    }
+}
+//9龙的身高高于185吗？：false
+//命运由我不由天
+//9龙
+//10
+//false
+//6
+//我是一个演示的函数式接口
+</code></pre><p>以上演示了lambda接口的使用及自定义一个函数式接口并使用。下面，我们看看java8将函数式接口封装到流中如何高效的帮助我们处理集合。</p>
+<p>注意：Student::getName例子中这种编写lambda表达式的方式称为方法引用。格式为ClassNmae::methodName。是不是很神奇，java8就是这么迷人。</p>
+<pre><code>示例：本篇所有示例都基于以下三个类。OutstandingClass：班级；Student：学生；SpecialityEnum：特长。
+</code></pre><p><img src="/my-blog/2019/12/02/lambda使用/class.webp" alt="接口"></p>
+<p><strong><em><code>1.2 惰性求值与及早求值</code></em></strong></p>
+<p>惰性求值：只描述Stream，操作的结果也是Stream，这样的操作称为惰性求值。惰性求值可以像建造者模式一样链式使用，最后再使用及早求值得到最终结果。</p>
+<p>及早求值：得到最终的结果而不是Stream，这样的操作称为及早求值。</p>
+<p><strong><em><code>2、常用的流</code></em></strong><br>2.1 collect(Collectors.toList())<br>将流转换为list。还有toSet()，toMap()等。及早求值。</p>
+<pre><code>public class TestCase {
+    public static void main(String[] args) {
+        List&lt;Student&gt; studentList = Stream.of(new Student(&quot;路飞&quot;, 22, 175),
+                new Student(&quot;红发&quot;, 40, 180),
+                new Student(&quot;白胡子&quot;, 50, 185)).collect(Collectors.toList());
+        System.out.println(studentList);
+    }
+}
+//输出结果
+//[Student{name=&apos;路飞&apos;, age=22, stature=175, specialities=null}, 
+//Student{name=&apos;红发&apos;, age=40, stature=180, specialities=null}, 
+//Student{name=&apos;白胡子&apos;, age=50, stature=185, specialities=null}]
+</code></pre><p>2.2 filter<br>顾名思义，起过滤筛选的作用。内部就是Predicate接口。惰性求值。<br><img src="/my-blog/2019/12/02/lambda使用/filter.webp" alt="接口"></p>
+<p>比如我们筛选出出身高小于180的同学。</p>
+<pre><code>public class TestCase {
+    public static void main(String[] args) {
+        List&lt;Student&gt; students = new ArrayList&lt;&gt;(3);
+        students.add(new Student(&quot;路飞&quot;, 22, 175));
+        students.add(new Student(&quot;红发&quot;, 40, 180));
+        students.add(new Student(&quot;白胡子&quot;, 50, 185));
+
+        List&lt;Student&gt; list = students.stream()
+            .filter(stu -&gt; stu.getStature() &lt; 180)
+            .collect(Collectors.toList());
+        System.out.println(list);
+    }
+}
+//输出结果
+//[Student{name=&apos;路飞&apos;, age=22, stature=175, specialities=null}]
+</code></pre><p>2.3 map<br>转换功能，内部就是Function接口。惰性求值<br><img src="/my-blog/2019/12/02/lambda使用/map.webp" alt="接口"></p>
+<pre><code>public class TestCase {
+    public static void main(String[] args) {
+        List&lt;Student&gt; students = new ArrayList&lt;&gt;(3);
+        students.add(new Student(&quot;路飞&quot;, 22, 175));
+        students.add(new Student(&quot;红发&quot;, 40, 180));
+        students.add(new Student(&quot;白胡子&quot;, 50, 185));
+
+        List&lt;String&gt; names = students.stream().map(student -&gt; student.getName())
+                .collect(Collectors.toList());
+        System.out.println(names);
+    }
+}
+//输出结果
+//[路飞, 红发, 白胡子]
+</code></pre><p>例子中将student对象转换为String对象，获取student的名字。</p>
+<p>2.4 flatMap<br>将多个Stream合并为一个Stream。惰性求值<br><img src="/my-blog/2019/12/02/lambda使用/flatMap.webp" alt="接口"></p>
+<pre><code>public class TestCase {
+    public static void main(String[] args) {
+        List&lt;Student&gt; students = new ArrayList&lt;&gt;(3);
+        students.add(new Student(&quot;路飞&quot;, 22, 175));
+        students.add(new Student(&quot;红发&quot;, 40, 180));
+        students.add(new Student(&quot;白胡子&quot;, 50, 185));
+
+        List&lt;Student&gt; studentList = Stream.of(students,
+                asList(new Student(&quot;艾斯&quot;, 25, 183),
+                        new Student(&quot;雷利&quot;, 48, 176)))
+                .flatMap(students1 -&gt; students1.stream()).collect(Collectors.toList());
+        System.out.println(studentList);
+    }
+}
+//输出结果
+//[Student{name=&apos;路飞&apos;, age=22, stature=175, specialities=null}, 
+//Student{name=&apos;红发&apos;, age=40, stature=180, specialities=null}, 
+//Student{name=&apos;白胡子&apos;, age=50, stature=185, specialities=null}, 
+//Student{name=&apos;艾斯&apos;, age=25, stature=183, specialities=null},
+//Student{name=&apos;雷利&apos;, age=48, stature=176, specialities=null}]
+</code></pre><p>调用Stream.of的静态方法将两个list转换为Stream，再通过flatMap将两个流合并为一个。</p>
+<p>2.5 max和min<br>我们经常会在集合中求最大或最小值，使用流就很方便。及早求值</p>
+<pre><code>public class TestCase {
+    public static void main(String[] args) {
+        List&lt;Student&gt; students = new ArrayList&lt;&gt;(3);
+        students.add(new Student(&quot;路飞&quot;, 22, 175));
+        students.add(new Student(&quot;红发&quot;, 40, 180));
+        students.add(new Student(&quot;白胡子&quot;, 50, 185));
+
+        Optional&lt;Student&gt; max = students.stream()
+            .max(Comparator.comparing(stu -&gt; stu.getAge()));
+        Optional&lt;Student&gt; min = students.stream()
+            .min(Comparator.comparing(stu -&gt; stu.getAge()));
+        //判断是否有值
+        if (max.isPresent()) {
+            System.out.println(max.get());
+        }
+        if (min.isPresent()) {
+            System.out.println(min.get());
+        }
+    }
+}
+//输出结果
+//Student{name=&apos;白胡子&apos;, age=50, stature=185, specialities=null}
+//Student{name=&apos;路飞&apos;, age=22, stature=175, specialities=null}
+</code></pre><p>max、min接收一个Comparator（例子中使用java8自带的静态函数，只需要传进需要比较值即可。）并且返回一个Optional对象，该对象是java8新增的类，专门为了防止null引发的空指针异常。</p>
+<p>可以使用max.isPresent()判断是否有值；可以使用max.orElse(new Student())，当值为null时就使用给定值；也可以使用max.orElseGet(() -&gt; new Student());这需要传入一个Supplier的lambda表达式。</p>
+<p>2.6 count<br>统计功能，一般都是结合filter使用，因为先筛选出我们需要的再统计即可。及早求值</p>
+<pre><code>public class TestCase {
+    public static void main(String[] args) {
+        List&lt;Student&gt; students = new ArrayList&lt;&gt;(3);
+        students.add(new Student(&quot;路飞&quot;, 22, 175));
+        students.add(new Student(&quot;红发&quot;, 40, 180));
+        students.add(new Student(&quot;白胡子&quot;, 50, 185));
+
+        long count = students.stream().filter(s1 -&gt; s1.getAge() &lt; 45).count();
+        System.out.println(&quot;年龄小于45岁的人数是：&quot; + count);
+    }
+}
+//输出结果
+//年龄小于45岁的人数是：2
+</code></pre><p>2.7 reduce<br>reduce 操作可以实现从一组值中生成一个值。在上述例子中用到的 count 、 min 和 max 方法，因为常用而被纳入标准库中。事实上，这些方法都是 reduce 操作。及早求值。<br><img src="/my-blog/2019/12/02/lambda使用/reduce.webp" alt="接口"></p>
+<pre><code>public class TestCase {
+    public static void main(String[] args) {
+        Integer reduce = Stream.of(1, 2, 3, 4).reduce(0, (acc, x) -&gt; acc+ x);
+        System.out.println(reduce);
+    }
+}
+//输出结果
+//10
+</code></pre><p>我们看得reduce接收了一个初始值为0的累加器，依次取出值与累加器相加，最后累加器的值就是最终的结果。</p>
+<p>三、高级集合类及收集器<br>3.1 转换成值<br>收集器，一种通用的、从流生成复杂值的结构。只要将它传给 collect 方法，所有的流就都可以使用它了。标准类库已经提供了一些有用的收集器，以下示例代码中的收集器都是从 java.util.stream.Collectors 类中静态导入的。</p>
+<pre><code>public class CollectorsTest {
+    public static void main(String[] args) {
+        List&lt;Student&gt; students1 = new ArrayList&lt;&gt;(3);
+        students1.add(new Student(&quot;路飞&quot;, 23, 175));
+        students1.add(new Student(&quot;红发&quot;, 40, 180));
+        students1.add(new Student(&quot;白胡子&quot;, 50, 185));
+
+        OutstandingClass ostClass1 = new OutstandingClass(&quot;一班&quot;, students1);
+        //复制students1，并移除一个学生
+        List&lt;Student&gt; students2 = new ArrayList&lt;&gt;(students1);
+        students2.remove(1);
+        OutstandingClass ostClass2 = new OutstandingClass(&quot;二班&quot;, students2);
+        //将ostClass1、ostClass2转换为Stream
+        Stream&lt;OutstandingClass&gt; classStream = Stream.of(ostClass1, ostClass2);
+        OutstandingClass outstandingClass = biggestGroup(classStream);
+        System.out.println(&quot;人数最多的班级是：&quot; + outstandingClass.getName());
+
+        System.out.println(&quot;一班平均年龄是：&quot; + averageNumberOfStudent(students1));
+    }
+
+    /**
+     * 获取人数最多的班级
+     */
+    private static OutstandingClass biggestGroup(Stream&lt;OutstandingClass&gt; outstandingClasses) {
+        return outstandingClasses.collect(
+                maxBy(comparing(ostClass -&gt; ostClass.getStudents().size())))
+                .orElseGet(OutstandingClass::new);
+    }
+
+    /**
+     * 计算平均年龄
+     */
+    private static double averageNumberOfStudent(List&lt;Student&gt; students) {
+        return students.stream().collect(averagingInt(Student::getAge));
+    }
+}
+//输出结果
+//人数最多的班级是：一班
+//一班平均年龄是：37.666666666666664
+</code></pre><p>maxBy或者minBy就是求最大值与最小值。<br>3.2 转换成块<br>常用的流操作是将其分解成两个集合，Collectors.partitioningBy帮我们实现了，接收一个Predicate函数式接口。<br><img src="/my-blog/2019/12/02/lambda使用/patition.webp" alt="接口"></p>
+<p>将示例学生分为会唱歌与不会唱歌的两个集合。</p>
+<pre><code>public class PartitioningByTest {
+    public static void main(String[] args) {
+        //省略List&lt;student&gt; students的初始化
+        Map&lt;Boolean, List&lt;Student&gt;&gt; listMap = students.stream().collect(
+            Collectors.partitioningBy(student -&gt; student.getSpecialities().
+                                      contains(SpecialityEnum.SING)));
+    }
+}
+</code></pre><p>3.3 数据分组<br>数据分组是一种更自然的分割数据操作，与将数据分成 ture 和 false 两部分不同，可以使用任意值对数据分组。Collectors.groupingBy接收一个Function做转换。<br><img src="/my-blog/2019/12/02/lambda使用/group.webp" alt="接口"><br>如图，我们使用groupingBy将根据进行分组为圆形一组，三角形一组，正方形一组。</p>
+<p>例子：根据学生第一个特长进行分组</p>
+<pre><code>public class GroupingByTest {
+    public static void main(String[] args) {
+        //省略List&lt;student&gt; students的初始化
+         Map&lt;SpecialityEnum, List&lt;Student&gt;&gt; listMap = 
+             students.stream().collect(
+             Collectors.groupingBy(student -&gt; student.getSpecialities().get(0)));
+    }
+}
+</code></pre><p>Collectors.groupingBy与SQL 中的 group by 操作是一样的。</p>
+<p>3.4 字符串拼接<br>如果将所有学生的名字拼接起来，怎么做呢？通常只能创建一个StringBuilder，循环拼接。使用Stream，使用Collectors.joining()简单容易。</p>
+<pre><code>public class JoiningTest {
+    public static void main(String[] args) {
+        List&lt;Student&gt; students = new ArrayList&lt;&gt;(3);
+        students.add(new Student(&quot;路飞&quot;, 22, 175));
+        students.add(new Student(&quot;红发&quot;, 40, 180));
+        students.add(new Student(&quot;白胡子&quot;, 50, 185));
+
+         String names = students.stream()
+             .map(Student::getName).collect(Collectors.joining(&quot;,&quot;,&quot;[&quot;,&quot;]&quot;));
+        System.out.println(names);
+    }
+}
+//输出结果
+//[路飞,红发,白胡子]
+</code></pre><p>joining接收三个参数，第一个是分界符，第二个是前缀符，第三个是结束符。也可以不传入参数Collectors.joining()，这样就是直接拼接。</p>
+<p>四、总结<br>本篇主要从实际使用讲述了常用的方法及流，使用java8可以很清晰表达你要做什么，代码也很简洁。本篇例子主要是为了讲解较为简单，大家可以去使用java8重构自己现有的代码，自行领会lambda的奥妙。</p>
+<p>本文说的Stream要组合使用才会发挥更大的功能，链式调用很迷人，根据自己的业务去做吧。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://xiajuwei.github.io/my-blog/2019/12/02/lambda使用/" data-id="ck3o7yf020003m8vcftf59f23" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/my-blog/2019/12/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/my-blog/2019/12/02/lambda使用/">lambda使用</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2019/12/02/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2019/08/10/常用插件/">常用插件</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2019/07/02/redis/">redis</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2019/06/20/java-中的锁/">java 中的锁</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/my-blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/my-blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/my-blog/fancybox/jquery.fancybox.css">
+  <script src="/my-blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/my-blog/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
