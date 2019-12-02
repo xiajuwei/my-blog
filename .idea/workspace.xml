@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dd05983-a5cd-4bf2-b9a1-f82c0de62412" name="Default Changelist" comment="" />
+    <list default="true" id="5dd05983-a5cd-4bf2-b9a1-f82c0de62412" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/class.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/filter.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/flatMap.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/map.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/patition.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/reduce.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/函数式接口.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +26,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/详解java-nio.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1695">
-                <caret line="113" selection-start-line="113" selection-end-line="114" selection-end-column="32" />
+              <first_editor relative-caret-position="-4092">
+                <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="15" />
               </first_editor>
               <second_editor />
             </state>
@@ -26,11 +35,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/java-中的锁.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/十大排序算法.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="990">
-                <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="264">
+                <caret line="120" selection-start-line="120" selection-end-line="120" selection-end-column="22" />
               </first_editor>
               <second_editor />
             </state>
@@ -38,11 +47,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/hello-world.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/Hexo-GitHub-搭建自己的博客.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="542">
-                <caret line="79" selection-start-line="79" selection-end-line="79" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="-226">
+                <caret line="10" selection-start-line="10" selection-end-line="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -50,23 +59,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/redis.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/lambda使用.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="195">
-                <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/多线程.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="180">
-                <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+              <first_editor relative-caret-position="381">
+                <caret line="296" column="29" selection-start-line="296" selection-start-column="29" selection-end-line="296" selection-end-column="29" />
               </first_editor>
               <second_editor />
             </state>
@@ -106,6 +103,7 @@
         <option value="$PROJECT_DIR$/source/_posts/java-中的锁.md" />
         <option value="$PROJECT_DIR$/source/_posts/hello-world.md" />
         <option value="$PROJECT_DIR$/source/_posts/redis.md" />
+        <option value="$PROJECT_DIR$/source/_posts/lambda使用.md" />
       </list>
     </option>
   </component>
@@ -125,8 +123,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="223" />
-    <option name="y" value="74" />
+    <option name="x" value="595" />
+    <option name="y" value="61" />
     <option name="width" value="1229" />
     <option name="height" value="905" />
   </component>
@@ -136,6 +134,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,11 +153,17 @@
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="my-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+              <item name="lambda使用" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -169,18 +174,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\blog\my-blog\themes\landscape\source\image" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\blog\my-blog\source\_posts\lambda使用" />
       <recent name="E:\blog\my-blog\source\_posts\java-中的锁" />
       <recent name="E:\blog\my-blog\source\_posts\详解java-nio" />
       <recent name="E:\blog\my-blog\source\_posts\十大排序算法" />
       <recent name="E:\blog\my-blog\source\_posts\将对象用作Map中的key" />
-      <recent name="E:\blog\my-blog\source\_posts\常用JSON库性能比较" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\blog\my-blog\themes\landscape\source\image" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -220,24 +226,26 @@
       <workItem from="1561516385879" duration="598000" />
       <workItem from="1561601638321" duration="2000" />
       <workItem from="1562062960930" duration="342000" />
+      <workItem from="1575266812223" duration="925000" />
+      <workItem from="1575267869933" duration="3401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52398000" />
+    <option name="totallyTimeSpent" value="56724000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="595" y="61" width="1229" height="905" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24307036" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31308812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -249,13 +257,11 @@
       <window_info anchor="bottom" id="SonarLint" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49946696" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.16052061" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27496758" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="14" />
       <window_info anchor="bottom" id="JRebel Executor" order="15" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -263,6 +269,9 @@
       <window_info anchor="right" id="Maven" order="4" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Word Book" order="9" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,26 +330,6 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/十大排序算法/桶排序.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/十大排序算法.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="306">
-            <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/Hexo-GitHub-搭建自己的博客.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="170">
-            <caret line="10" selection-start-line="10" selection-end-line="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/java集合详解.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -363,21 +352,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/详解java-nio.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/多线程.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1695">
-            <caret line="113" selection-start-line="113" selection-end-line="114" selection-end-column="32" />
+          <first_editor relative-caret-position="264">
+            <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/java-中的锁.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/redis.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="990">
-            <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+          <first_editor relative-caret-position="286">
+            <caret line="13" selection-start-line="13" selection-end-line="13" />
           </first_editor>
           <second_editor />
         </state>
@@ -393,21 +382,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/多线程.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/java-中的锁.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <first_editor relative-caret-position="575">
+            <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/redis.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/详解java-nio.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="195">
-            <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <first_editor relative-caret-position="-4092">
+            <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/十大排序算法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="264">
+            <caret line="120" selection-start-line="120" selection-end-line="120" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/Hexo-GitHub-搭建自己的博客.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-226">
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/lambda使用.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="381">
+            <caret line="296" column="29" selection-start-line="296" selection-start-column="29" selection-end-line="296" selection-end-column="29" />
           </first_editor>
           <second_editor />
         </state>
