@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dd05983-a5cd-4bf2-b9a1-f82c0de62412" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/class.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/filter.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/flatMap.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/map.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/patition.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/reduce.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/lambda使用/函数式接口.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,6 +120,7 @@
     <option name="width" value="1229" />
     <option name="height" value="905" />
   </component>
+  <component name="ProjectId" id="1mwmC4xQpS5CzyC3ulHjLsV8DPJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -167,6 +160,10 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -189,18 +186,7 @@
       <recent name="E:\blog\my-blog\source\_posts\将对象用作Map中的key" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
